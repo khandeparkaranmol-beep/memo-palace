@@ -15,7 +15,6 @@
     "@react-three/fiber": "^9.5.0",
     "@react-three/postprocessing": "^3.0.4",
     "@react-three/xr": "^6.6.29",
-    "@rollup/rollup-linux-arm64-gnu": "^4.59.0",
     "postprocessing": "^6.38.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

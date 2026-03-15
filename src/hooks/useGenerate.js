@@ -2,11 +2,11 @@ import { useState, useCallback } from 'react'
 import { MOCK_PALACE } from '../mockPalace'
 
 const API_URL = '/api/generate'
-const USE_MOCK = !import.meta.env.VITE_ANTHROPIC_API_KEY && import.meta.env.DEV
+const USE_MOCK = true // Always use mock demo palace for now
 
 /**
  * Hook for calling the palace generation API.
- * In dev without an API key, returns mock data.
+ * Currently using mock demo data.
  */
 export function useGenerate() {
   const [error, setError] = useState(null)
@@ -15,7 +15,7 @@ export function useGenerate() {
     setError(null)
 
     try {
-      // If no API key configured, use mock data for development
+      // Use mock demo palace data
       if (USE_MOCK) {
         onStep(0)
         await new Promise(r => setTimeout(r, 600))
