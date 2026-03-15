@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0d0d1a;
+  --bg-card: rgba(15, 15, 30, 0.85);
+  --text: #c8c8d8;
+  --text-bright: #eeeef4;
+  --text-dim: #666680;
+  --accent: #7c83ff;
+  --accent-glow: rgba(124, 131, 255, 0.3);
+  --accent-dim: rgba(124, 131, 255, 0.12);
+  --border: rgba(124, 131, 255, 0.15);
+  --danger: #ff4466;
+  --success: #44cc88;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-glow);
+  color: var(--text-bright);
+}
